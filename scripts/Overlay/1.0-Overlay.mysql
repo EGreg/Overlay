@@ -1,0 +1,9 @@
+CREATE TABLE `{$prefix}counter` (
+  `name` varchar(255) NOT NULL DEFAULT '',
+  `counter` int(11) unsigned NOT NULL,
+  PRIMARY KEY (`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `{$prefix}counter` (`name`, `counter`)
+VALUES
+	('Overlay', 0);

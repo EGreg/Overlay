@@ -1,0 +1,11 @@
+#common ignores
+.DS_Store 
+.hg/
+.idea/
+local/*
+files/Overlay/uploads/*/*
+!files/Overlay/uploads/Users/.dir
+!files/Overlay/uploads/Streams/.dir
+web/plugins/*
+web/uploads
+!*.dir

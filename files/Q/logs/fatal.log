@@ -1,0 +1,40 @@
+
+[2015-11-19 01:51:25] (gmba.local) Overlay: 
+$ => <Array>(4)
+(
+  ['type'] = <Integer(1)>4
+  ['message'] = <String(52)> syntax error, unexpected 'endforeach' (T_ENDFOREACH)
+  ['file'] = <String(53)> /projects/qbix/Overlay/views/Overlay/content/home.php
+  ['line'] = <Integer(2)>30
+)
+
+
+[2015-11-24 04:26:34] (gmba.local) Overlay: 
+$ => <Array>(4)
+(
+  ['type'] = <Integer(1)>4
+  ['message'] = <String(49)> syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+  ['file'] = <String(65)> /projects/qbix/Overlay/handlers/Overlay/home/response/content.php
+  ['line'] = <Integer(2)>24
+)
+
+
+[2015-11-24 04:26:45] (gmba.local) Overlay: 
+$ => <Array>(4)
+(
+  ['type'] = <Integer(1)>4
+  ['message'] = <String(49)> syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+  ['file'] = <String(68)> /projects/qbix/Overlay/handlers/Overlay/welcome/response/content.php
+  ['line'] = <Integer(1)>5
+)
+
+
+[2015-11-24 04:30:17] (gmba.local) Overlay: 
+$ => <Array>(4)
+(
+  ['type'] = <Integer(1)>4
+  ['message'] = <String(46)> syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+  ['file'] = <String(42)> /projects/qbix/Overlay/classes/Overlay.php
+  ['line'] = <Integer(2)>30
+)
+

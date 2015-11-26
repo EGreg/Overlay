@@ -1,0 +1,68 @@
+/**
+ * This CSS is just to get you started.
+ * Feel free to modify any of it for your own app.
+ */
+
+* { -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-tap-highlight-color: transparent; }
+a { text-decoration: none; color: #0055ff; }
+a:visited { color: #aa88cc; }
+html { background: white; box-sizing: border-box;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&amp;0.65+0,0+100;Neutral+Density */
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+	padding: 10px;
+	min-height: 100%;
+}
+html * { font-family: 'Open Sans', sans-serif; }
+*, *:before, *:after { box-sizing: inherit; }
+body { height: 100%; }
+h1 { font-size: 80px; height: 80px; font-weight: 400; }
+.Q_mobile h1 { margin: 0; font-size: 80px; height: 40px; font-weight: 400; }
+h2 { margin: 0; }
+#slogan { opacity: 0; }
+
+#page { padding: 10px; height: 100%; text-align: center; }
+.section { background: white; margin-top: 30px; margin-bottom: 30px; border-radius: 5px; }
+.section:first-child { margin-top: 0; }
+.section.Overlay_compressed * { display: none; }
+.section.Overlay_compressed h1 { display: block; margin-top: 0; margin-bottom: 0; }
+.section.Overlay_compressed h1 * { display: block; }
+.margin-fixer { height: 0; }
+.explanation * { display: inline-block; vertical-align: middle; font-size: 48px; line-height: 48px; }
+.Q_notMobile explanation * { margin: 0px 10px; }
+.explanation img { width: 125px; border-radius: 5px; }
+
+.Q_mobile .explanation img { width: 50px; }
+
+.login { position: relative; margin: 30px auto; }
+.Q_notMobile .login { width: 732px; }
+.Q_mobile .login img { width: 90%; }
+
+html.Q_mobile.Overlay_welcome { height: 100%; padding: 2%; }
+
+select { border: solid 10px #eee; font-size: 24px; }
+.Q_mobile select { font-size: 16px; width: 100%; }
+
+/*.Streams_photoSelector_container .Q_clickable_container {
+	margin-right: 2px;
+}*/
+
+.Streams_photoSelector_container>* {
+	vertical-align: top;
+}
+
+#preview { position: relative; height: 200px; margin: auto;  }
+.Q_notMobile #preview { width: 300px; height: 300px; }
+#preview img { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+#foreground { opacity: 0.5 }
+
+.Overlay_compressed { cursor: not-allowed; }
+.Overlay_compressed.Overlay_expandable { cursor: pointer; }
+
+.buttons>* { vertical-align: middle; display: inline-block; }
+.buttons { padding: 10px; }
+.buttons .Q_button { font-size: 24px; }
+
+.counter { font-size: 18px; color: #777; background: transparent; }
