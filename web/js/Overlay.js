@@ -155,7 +155,7 @@ var Overlay = (function (Q, $) {
 			
 			Q.prompt('Enter a caption for your photo', _postMessage);
 			
-			function _postMessage() {
+			function _postMessage(message) {
 				Overlay.postImage({
 					fb: { // data to be sent to FB
 						message: message,
