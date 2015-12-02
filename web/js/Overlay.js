@@ -99,7 +99,9 @@ var Overlay = (function (Q, $) {
 	
 	Q.page("Overlay/welcome", function () { 
 		
-		Q.Users.login({tryQuietly: true, onSuccess: Q.url('home')});
+		Q.Users.login({tryQuietly: true, onSuccess: {"Overlay": function () {
+			location = Q.url('home');
+		}}});
 
 	}, 'Overlay');
 	
@@ -203,7 +205,9 @@ var Overlay = (function (Q, $) {
 		$('.Q_clickable').tool('Q/clickable').activate();
 		
 		$('.Overlay_login').on(Q.Pointer.click, function () {
-			Q.Users.login({onSuccess: Q.url('home')});
+			Q.Users.login({onSuccess: {"Overlay": function () {
+				location = Q.url('home');
+			}}});
 			return false;
 		});
 		
