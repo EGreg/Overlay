@@ -11,7 +11,7 @@
 
 <div class='section Overlay_compressed'>
 	<div class="margin-fixer">&nbsp;</div>
-	<h1 id="slogan"><div>Step 2. Select a picture to overlay</div></h1>
+	<h1 id="slogan2"><div>Step 2. Select a picture to overlay</div></h1>
 	<div class="overlays">
 		<select id="countries">
 		<?php foreach ($countries as $src => $title): ?>
@@ -36,7 +36,7 @@
 
 <div class='section Overlay_compressed'>
 	<div class="margin-fixer">&nbsp;</div>
-	<h1 id="slogan"><div>Step 3. Upload new profile photo</div></h1>
+	<h1 id="slogan3"><div>Step 3. Upload new profile photo</div></h1>
 	
 	<div class="photo">
 
@@ -48,5 +48,10 @@
 </div>
 
 <div class="videoArea">
+<?php if (!Q_Request::isMobile()): ?>
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/2amNdUzhldM?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+<?php endif; ?>
+<div class="sourceCode">
+	<a href="https://github.com/EGreg/Overlay">Get complete source code on GitHub</a>
+</div>
 </div>

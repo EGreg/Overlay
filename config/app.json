@@ -5,9 +5,9 @@
 			"version" : "1.0",
 			"compatible": "1.0",
 			"requires": {
-				"Q": "0.8",
-				"Users": "0.8.3",
-				"Streams": "0.8.6"
+				"Q": "0.9",
+				"Users": "0.9.3",
+				"Streams": "0.9.3"
 			},
 			"recognizes": {
 				"Q": "0.8",
@@ -55,8 +55,7 @@
 					"plugins/Streams/css/Streams.css": "all.css",
 					"css/Overlay.css": "all.css",
 					"plugins/Q/js/jquery-1.11.1.min.js": "all.js",
-					"plugins/Q/js/jquery.tools.min.js": "all.js",
-					"plugins/Q/js/handlebars-v1.3.0.min.js": "all.js",
+					"plugins/Q/js/handlebars-v4.0.5.js": "all.js",
 					"plugins/Q/js/Q.js": "all.js",
 					"plugins/Users/js/Users.js": "all.js",
 					"plugins/Streams/js/Streams.js": "all.js",

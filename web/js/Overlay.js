@@ -40,7 +40,6 @@ var Overlay = (function (Q, $) {
 				type: 'POST',
 				cache: false,
 				success: function(response) {
-				debugger;
 					console.log(response);
 				},
 				error: function() {
@@ -99,15 +98,20 @@ var Overlay = (function (Q, $) {
 	
 	Q.page("Overlay/welcome", function () { 
 		
-		Q.Users.login({tryQuietly: true, onSuccess: {"Overlay": function () {
-			location = Q.url('home');
-		}}});
+		Q.Users.login({
+			tryQuietly: true, 
+			onSuccess: {
+				Overlay: function () {
+					window.location = Q.url('home');
+				}
+			}
+		});
 
 	}, 'Overlay');
 	
 	Q.page("Overlay/home", function () {
 		
-		Q.Tool.byId('Streams_photoSelector').state.onPhotos.set(function () {
+		Q.Tool.byId('Streams_photoSelector').state.onPhotosLoaded.set(function () {
 			this.$('img').tool('Q/clickable').activate();
 		});
 		
@@ -155,7 +159,7 @@ var Overlay = (function (Q, $) {
 			// convert the base64 string to string containing the binary data
 			var image = Overlay.conversions.base64ToString(data);
 			
-			Q.prompt('Enter a caption for your photo', _postMessage);
+			_postMessage("I made this with http://customizemypic.com");
 			
 			function _postMessage(message) {
 				Overlay.postImage({
@@ -205,9 +209,13 @@ var Overlay = (function (Q, $) {
 		$('.Q_clickable').tool('Q/clickable').activate();
 		
 		$('.Overlay_login').on(Q.Pointer.click, function () {
-			Q.Users.login({onSuccess: {"Overlay": function () {
-				location = Q.url('home');
-			}}});
+			Q.Users.login({
+				onSuccess: {
+					Overlay: function () {
+						location = Q.url('home');
+					}
+				}
+			});
 			return false;
 		});
 		
@@ -246,7 +254,9 @@ var Overlay = (function (Q, $) {
 		
 	}, 'Overlay');
 	
+	// example tool
 	Q.Tool.jQuery("Fisheye", "js/fn/fisheye.js");
+	Q.Tool.define("Overlay/cool", "js/tools/cool.js");
 
 	// tell Q.handle to load pages using AJAX - much smoother
 	Q.handle.options.loadUsingAjax = true;
@@ -264,7 +274,7 @@ var Overlay = (function (Q, $) {
 		// set some options
 		Q.Users.login.options = Q.extend(Q.Users.login.options, {
 			using: 'facebook',
-			scope: 'email,public_profile,user_photos,publish_actions'
+			scope: ['email', 'public_profile', 'user_photos', 'publish_actions']
 		});
 		
 		if (Q.info.isMobile) {

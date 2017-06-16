@@ -7,7 +7,7 @@ function Overlay_before_Q_responseExtras()
 	Q_Response::addStylesheet('plugins/Q/css/Q.css');
 	Q_Response::addStylesheet('css/Overlay.css', '@end');
 	
-	Q_Response::addStylesheet('http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700');
+	Q_Response::addStylesheet('https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700');
 
 	if (Q_Config::get('Q', 'firebug', false)) {
 		Q_Response::addScript("https://getfirebug.com/firebug-lite-debug.js");
